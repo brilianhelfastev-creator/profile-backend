@@ -188,9 +188,9 @@ app.listen(PORT, async () => {
   console.log("\n========================================");
   console.log("✅ BACKEND SERVER STARTED SUCCESSFULLY!");
   console.log("========================================");
-  console.log(`Environment : development`);
-  console.log(`Database    : profile_db`);
-  console.log(`Host        : localhost`);
+  console.log(`Environment : ${process.env.NODE_ENV || 'development'}`);
+  console.log(`Database    : ${process.env.DB_NAME || 'profile_db'}`);
+  console.log(`Host        : ${process.env.DB_HOST || 'localhost'}`);
   console.log(`URL Server  : http://localhost:${PORT}`);
   console.log("========================================\n");
   try {
